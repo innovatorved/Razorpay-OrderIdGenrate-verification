@@ -1,1 +1,1 @@
-web:node razorOrderGenrate.js
+web: npm install && node razorOrderGenrate.js
