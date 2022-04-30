@@ -25,7 +25,7 @@ app.post('/verification', (req, res) => {
 	// header : req.headers['x-razorpay-signature']
 	// console.log(req.body);
 
-	const secret = '12345678'
+	const secret = process.env.WEBHOOK_SECRET;
 	const shasum = crypto.createHmac('sha256', secret);
 	shasum.update(JSON.stringify(req.body));
 
@@ -34,6 +34,8 @@ app.post('/verification', (req, res) => {
 
 	if (digest === req.headers['x-razorpay-signature']) {
 		res.json({ status: true })
+		console.log('verified');
+		// process whatever zyou like
 	} else {
 		res.json({ status: false })
 	}
