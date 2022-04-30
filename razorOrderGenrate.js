@@ -33,7 +33,7 @@ app.post('/createorder', async (req, res) => {
 
 	try {
 		const response = await razorpay.orders.create(options);
-		console.log(response);
+		// console.log(response);
 		res.json({
 			id: response.id,
 			currency: response.currency,

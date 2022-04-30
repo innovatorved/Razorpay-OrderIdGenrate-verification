@@ -5,7 +5,10 @@
   "main": "razorOrderGenrate.js",
   "scripts": {
     "dev": "nodemon razorOrderGenrate.js",
-    "start": "node razorOrderGenrate.js"
+    "start": "node razorOrderGenrate.js",
+    "login" : "firebase login",
+    "init" : "firebase init",
+    "deploy" : "firebase deploy"
   },
   "keywords": [],
   "author": "",
