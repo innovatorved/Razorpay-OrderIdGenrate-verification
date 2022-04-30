@@ -3,12 +3,11 @@ const Razorpay = require('razorpay');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const { v4: uuidv4 } = require('uuid');
-require('dotenv').config()
 
 app.use(cors());
 app.use(bodyParser.json());
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT;
 const HOST = process.env.HOST || 'localhost';
 const KEYID = process.env.KEYID;
 const KEYSECRET = process.env.KEYSECRET;
